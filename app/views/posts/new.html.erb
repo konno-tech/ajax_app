@@ -1,5 +1,12 @@
-<h1>新規投稿ページ</h1>
+<%# <h1>新規投稿ページ</h1>
 <%= form_with url: '/posts', method: :post, local: true do |form| %>
+  <%# <%= form.text_field :content %>
+  <%# <%= form.submit '投稿する' %>
+<%# <% end %>
+
+<h1>AjaxApp</h1>
+<%# 「local: true」ではなく「id: "form"」に変更 %>
+<%= form_with url:  "/posts", method: :post,id: "form" do |form| %>
   <%= form.text_field :content %>
-  <%= form.submit '投稿する' %>
+  <%= form.submit '投稿する' , id: "submit" %>
 <% end %>
